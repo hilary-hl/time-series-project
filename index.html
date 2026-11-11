@@ -1,0 +1,117 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <title>Analysis of the Signature Transformation in Time-Series Classification</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Analysis of the Signature Transformation in Time-Series Classification</h1>
+        <p>A collaborative research project using the shape of time-series data to detect rare events. </p>
+    </header>
+
+    <main>
+        <section>
+            <h2>Overview</h2>
+            <p>
+                Time-series data often has several variables changing at once, and the
+                order of those changes can matter. Path signatures turn that movement
+                into numerical features a machine learning model can use. We applied
+                them to a classification problem where the events of interest are rare.
+            </p>
+        </section>
+
+        <section>
+            <h2>Project Details</h2>
+
+            <article class="item">
+                <button class="toggle" aria-expanded="false">
+                    <span class="role">What is a path signature?</span>
+                </button>
+                <div class="details" hidden>
+                    <p>
+                        A path signature summarizes a multi-dimensional path as a set of
+                        numbers. The first level records the total change in each variable.
+                        Higher levels capture how variables move together and in what order,
+                        so it can tell apart two paths with the same start and end points.
+                    </p>
+                </div>
+            </article>
+
+            <article class="item">
+                <button class="toggle" aria-expanded="false">
+                    <span class="role">The problem</span>
+                </button>
+                <div class="details" hidden>
+                    <p>Sepsis is a life-threatening condition affecting millions of ICU patients annually. Early
+                        detection is critical since each hour of delay increases mortality risk. In the project's first
+                        semester, we investigated the relationship between multi-dimensional patient hospital data and
+                        sepsis outcome.</p>
+                    <p>
+                        Because one class is much rarer than the other, a model can seem
+                        accurate while missing most of the cases that matter.
+                    </p>
+                </div>
+            </article>
+
+            <article class="item">
+                <button class="toggle" aria-expanded="false">
+                    <span class="role">Method</span>
+                </button>
+                <div class="details" hidden>
+                    <ul>
+                        <li>Engineered path signature features from multi-dimensional time series.</li>
+                        <li>Conducted analysis comparing different time windows.</li>
+                        <li>Trained Random Forest and Logistic Regression classifiers.</li>
+                    </ul>
+                </div>
+            </article>
+
+            <article class="item">
+                <button class="toggle" aria-expanded="false">
+                    <span class="role">Results</span>
+                </button>
+                <div class="details" hidden>
+                    <p>
+                        The classifiers achieved 0.72 average precision on minority-class
+                        detection. Average precision measures how well a model finds rare
+                        cases without raising too many false alarms, which makes it more
+                        informative than accuracy for imbalanced data.
+                    </p>
+                    <img src="results.png" alt="Results significantly improved for minority class detection">
+                </div>
+            </article>
+
+            <article class="item">
+                <button class="toggle" aria-expanded="false">
+                    <span class="role">Next steps</span>
+                </button>
+                <div class="details" hidden>
+                    <p>
+                        We are extending the method to decentralized finance (DeFi) by
+                        comparing signature-based similarity between liquidity pool paths
+                        around security events, with the goal of detecting early warning
+                        patterns.
+                    </p>
+                </div>
+            </article>
+
+            <article class="item">
+                <button class="toggle" aria-expanded="false">
+                    <span class="role">Tools</span>
+                </button>
+                <div class="details" hidden>
+                    <ul>
+                        <li>Python</li>
+                        <li>Scikit-learn</li>
+                    </ul>
+                </div>
+            </article>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+
+</html>
